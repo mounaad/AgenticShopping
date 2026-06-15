@@ -1,5 +1,7 @@
 package com.agenticshopping.userservice.controller;
 
+import com.agenticshopping.userservice.dto.LoginRequest;
+import com.agenticshopping.userservice.dto.RegisterRequest;
 import com.agenticshopping.userservice.model.User;
 import com.agenticshopping.userservice.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -34,5 +36,22 @@ public class UserController {
     public ResponseEntity<Void> deleteUser(@PathVariable String id) {
         userService.deleteUser(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @PostMapping("/register")
+    public ResponseEntity<User> register(
+            @RequestBody RegisterRequest request) {
+
+        return ResponseEntity.status(201)
+                .body(userService.register(request));
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<User> login(
+            @RequestBody LoginRequest request) {
+
+        return ResponseEntity.ok(
+                userService.login(request)
+        );
     }
 }
