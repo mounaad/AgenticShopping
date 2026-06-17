@@ -70,6 +70,19 @@
             <artifactId>spring-boot-starter-webmvc-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- Langchain4j Spring Boot -->
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-spring-boot-starter</artifactId>
+            <version>1.0.0-beta3</version>
+        </dependency>
+
+        <!-- Ollama -->
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-ollama-spring-boot-starter</artifactId>
+            <version>1.0.0-beta3</version>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
