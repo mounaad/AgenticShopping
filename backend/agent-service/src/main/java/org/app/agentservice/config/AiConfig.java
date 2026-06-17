@@ -4,6 +4,8 @@ import dev.langchain4j.model.ollama.OllamaChatModel;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.time.Duration;
+
 
 @Configuration
 public class AiConfig {
@@ -25,6 +27,8 @@ public class AiConfig {
                 )
 
                 .temperature(0.7)
+
+                .timeout(Duration.ofMinutes(5))
 
                 .build();
 

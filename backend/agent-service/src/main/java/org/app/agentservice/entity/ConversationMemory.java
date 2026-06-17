@@ -6,9 +6,10 @@ import lombok.*;
 
 
 @Entity
-@Data
-@AllArgsConstructor
+@Getter
+@Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class ConversationMemory {
 
 
@@ -19,10 +20,15 @@ public class ConversationMemory {
     private Long id;
 
 
+
     private Long userId;
 
 
-    @Column(columnDefinition = "TEXT")
+
+    @Column(
+            columnDefinition="TEXT"
+    )
     private String messages;
+
 
 }
