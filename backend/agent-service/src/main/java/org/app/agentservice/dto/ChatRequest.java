@@ -8,7 +8,7 @@ import lombok.Data;
 public class ChatRequest {
 
 
-    private Long userId;
+    private String  userId;
 
     private String message;
 

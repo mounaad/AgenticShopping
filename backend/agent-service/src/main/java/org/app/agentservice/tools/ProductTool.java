@@ -21,9 +21,9 @@ public class ProductTool {
 
 
     @Tool("Search products by name or keyword")
-    public String searchProducts(String query){
+    public String searchProducts(String name){
 
-        return productClient.searchProducts(query);
+        return productClient.searchProducts(name);
 
     }
 

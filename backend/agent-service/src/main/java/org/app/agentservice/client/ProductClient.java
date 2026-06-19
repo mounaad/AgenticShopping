@@ -6,15 +6,14 @@ import org.springframework.web.bind.annotation.*;
 
 
 @FeignClient(
-        name="product-service",
-        url="http://localhost:8083"
+        name="product-service"
 )
 public interface ProductClient {
 
 
     @GetMapping("/api/products/search")
     String searchProducts(
-            @RequestParam("query") String query
+            @RequestParam("name") String name
     );
 
 

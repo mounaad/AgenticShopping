@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 
 @SpringBootApplication
-@EnableFeignClients
+@EnableFeignClients(basePackages = "org.app.agentservice.client")
 public class AgentServiceApplication {
 
 

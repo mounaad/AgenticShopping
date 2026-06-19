@@ -30,6 +30,7 @@ public class AgentController {
 
         String answer =
                 agentService.chat(
+                        request.getUserId(),
                         request.getMessage()
                 );
 
